@@ -1,6 +1,6 @@
 use anyhow::Result;
 use interface::*;
-use wasmer::{imports, Function, Instance, Module, Store, WasmerEnv};
+use wasmer::{Instance, Module, Store, WasmerEnv};
 
 #[derive(Default, Clone)]
 struct MyHostImpl {
@@ -24,10 +24,8 @@ fn main() -> Result<()> {
 
     env.init_with_instance(&instance)?;
 
-    let func = env.__fp_gen_foobar_ref().unwrap();
-
     for _ in 0..3 {
-        let res = func.call()?;
+        let res = env.foobar()?;
 
         println!("guest func returned: {:#}", res);
     }

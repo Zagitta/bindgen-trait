@@ -94,7 +94,9 @@ pub mod host {
 
     impl<T: Sync + Send + Default + Clone> MyGuestInterface for Runtime<T> {
         fn foobar(&mut self) -> Result<i32, RuntimeError> {
-            self.__fp_gen_foobar_ref().unwrap().call()
+            self.__fp_gen_foobar_ref()
+                .ok_or_else(|| RuntimeError::new("__fp_gen_foobar export not found"))?
+                .call()
         }
     }
 }
