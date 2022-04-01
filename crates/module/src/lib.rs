@@ -13,7 +13,7 @@ impl MyService {
 
 impl MyGuestInterface for MyService {
     fn foobar(&mut self) -> i32 {
-        self.num += 1;
+        self.num += Host::barfoo(1);
         self.num
     }
 }

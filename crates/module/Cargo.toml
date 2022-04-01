@@ -9,4 +9,4 @@ edition = "2021"
 crate-type = ["cdylib"]
 
 [dependencies]
-interface = { path = "../interface" }
+interface = { path = "../interface", features = ["guest"] }
