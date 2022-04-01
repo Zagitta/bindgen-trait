@@ -1,0 +1,10 @@
+[workspace]
+members = ["crates/*"]
+
+[profile.release]
+lto = true
+strip = true
+
+[profile.release.package.module]
+opt-level = 'z'
+codegen-units = 1
