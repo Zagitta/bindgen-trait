@@ -401,6 +401,9 @@ dependencies = [
 [[package]]
 name = "interface"
 version = "0.1.0"
+dependencies = [
+ "wasmer",
+]
 
 [[package]]
 name = "js-sys"
@@ -735,6 +738,7 @@ name = "runtime"
 version = "0.1.0"
 dependencies = [
  "anyhow",
+ "interface",
  "wasmer",
 ]
 

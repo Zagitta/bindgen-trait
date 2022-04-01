@@ -7,7 +7,7 @@ struct MyService {
 
 impl MyService {
     const fn new() -> MyService {
-        MyService { num: 0xF00BAA }
+        MyService { num: 0 }
     }
 }
 

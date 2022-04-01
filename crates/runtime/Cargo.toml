@@ -8,3 +8,4 @@ edition = "2021"
 [dependencies]
 wasmer = "2.0"
 anyhow = "1.0.56"
+interface = { path = "../interface", features = ["host"] }
