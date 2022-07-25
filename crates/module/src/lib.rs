@@ -11,10 +11,15 @@ impl MyService {
     }
 }
 
+#[async_trait::async_trait]
 impl MyGuestInterface for MyService {
     fn foobar(&mut self) -> i32 {
         self.num += Host::barfoo(1);
         self.num
+    }
+
+    async fn my_async_guest_fn(&mut self) -> String {
+        todo!()
     }
 }
 

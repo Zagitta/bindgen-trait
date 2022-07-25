@@ -1,5 +1,5 @@
 [package]
-name = "module"
+name = "wasm-bindgen-test"
 version = "0.1.0"
 edition = "2021"
 
@@ -9,5 +9,4 @@ edition = "2021"
 crate-type = ["cdylib"]
 
 [dependencies]
-interface = { path = "../interface", features = ["guest"] }
-async-trait = "0.1.53"
+wasm-bindgen = "0.2.74"
